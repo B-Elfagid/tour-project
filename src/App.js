@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import Loading from './Loading';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [loading, setLoading] = useState(true);
+  const [tours, setTours] = useState([])
+
+  if(loading) {
+    return (
+      <main>
+        <Loading />
+      </main>
+    )
+  }
+
+  return<h2>Tours project excercise</h2>
 }
 
 export default App;
